@@ -1,0 +1,43 @@
+{
+  "name": "videoplayerpoc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "serve": "http-server -p 3000 out/",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.10",
+    "@mui/material": "^5.15.10",
+    "@mui/material-nextjs": "^5.15.9",
+    "file-size": "^1.0.0",
+    "next": "14.1.0",
+    "qs": "^6.12.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
+    "sleep-promise": "^9.1.0"
+  },
+  "devDependencies": {
+    "@types/file-size": "^1.0.3",
+    "@types/license-checker": "^25.0.6",
+    "@types/node": "^20",
+    "@types/qs": "^6.9.15",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "http-server": "^14.1.1",
+    "license-checker": "^25.0.1",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
+}
