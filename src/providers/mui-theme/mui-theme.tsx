@@ -19,18 +19,6 @@ const roboto = Roboto({
 export const themeOptions: ThemeOptions = {
   palette: {
     mode: "light",
-
-    primary: {
-      // main: '#483631',
-      main: "#184E77",
-    },
-    secondary: {
-      // main: '#f36527',
-      main: "#52B69A",
-    },
-    // background: {
-    //   default: "#e1f5fe"
-    // },
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
