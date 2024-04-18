@@ -1,7 +1,8 @@
+import { BASE_URL } from "@/utils/environment";
 import { create } from "zustand";
 
 
-const defaultSrc = `${process.env.NEXT_PUBLIC_BASE_URL}/sample/ts/output.m3u8`;
+const defaultSrc = `${BASE_URL}/sample/ts/output.m3u8`;
 
 export enum PlayerEvent {
   onPlay = 'onPlay',

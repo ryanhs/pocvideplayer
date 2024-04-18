@@ -1,7 +1,7 @@
 "use client";
 
 import React, { RefObject, useEffect } from "react";
-import Player from "react-hls-player";
+import Player from "./orig";
 import { PlayerEvent, usePlayerState } from "@/providers/state/zustand/player";
 import { useDebouncedCallback } from "use-debounce";
 
@@ -26,7 +26,7 @@ export function ReactHLSPlayer() {
     playerRef.current.addEventListener("play", onPlay);
     playerRef.current.addEventListener("playing", onPlaying);
     playerRef.current.addEventListener("pause", onPause);
-    playerRef.current.addEventListener("volumechange", onVolumeChange);
+    // playerRef.current.addEventListener("volumechange", onVolumeChange);
     playerRef.current.addEventListener("ended", onEnded);
 
 

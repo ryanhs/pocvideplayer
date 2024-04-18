@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "next build",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=4096 NEXT_PUBLIC_BASE_URL=http://poc-olxvideoplayer.s3-website-ap-southeast-1.amazonaws.com next build --no-lint",
     "serve": "http-server -p 3000 out/",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:prod": "AWS_PROFILE=techadmo aws s3 sync out/ s3://poc-olxvideoplayer --delete",
+    "deploy": "yarn deploy:prod"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -30,11 +32,13 @@
   },
   "devDependencies": {
     "@types/file-size": "^1.0.3",
+    "@types/hls.js": "^1.0.0",
     "@types/license-checker": "^25.0.6",
     "@types/node": "^20",
     "@types/qs": "^6.9.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "http-server": "^14.1.1",
